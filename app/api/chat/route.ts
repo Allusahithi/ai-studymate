@@ -92,7 +92,7 @@ Rules:
       reply: result.text,
     });
 
-  }   catch (error) {
+  } catch (error) {
     console.error("Chat error:", error);
 
     return Response.json(
