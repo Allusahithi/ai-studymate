@@ -93,15 +93,14 @@ Rules:
     });
 
   } catch (error) {
-    console.error("Chat error:", error);
+  console.error("Chat error:", error);
 
-    return Response.json(
-      {
-        error: "Failed to generate response",
-      },
-      {
-        status: 500,
-      }
-    );
-  }
+  return Response.json(
+    {
+      error: error instanceof Error ? error.message : String(error),
+    },
+    {
+      status: 500,
+    }
+  );
 }
