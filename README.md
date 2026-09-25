@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🤖 AI StudyMate
 
-## Getting Started
+AI StudyMate is a multimodal AI-powered study assistant that helps students understand their study materials using **Retrieval-Augmented Generation (RAG)**.
 
-First, run the development server:
+Users can upload study material, ask questions using text, and provide images for AI-powered analysis.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+https://ai-studymate-three.vercel.app
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📂 GitHub Repository
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+https://github.com/Allusahithi/ai-studymate
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- 📄 Upload study materials
+- 💬 Ask questions using natural language
+- 🖼️ Support image-based questions
+- 🔎 Retrieval-Augmented Generation (RAG)
+- 🧠 Context-aware answers based on uploaded study material
+- ⚡ Fast AI responses using Groq
+- 🌐 Deployed using Vercel
+- 📱 Simple and responsive user interface
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🧠 How It Works
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+AI StudyMate uses a RAG-based approach to answer questions from uploaded study material.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Step 1 — Upload Study Material
+
+The user uploads a study document such as a PDF.
+
+### Step 2 — Extract Text
+
+The application extracts the text from the uploaded document and divides it into smaller chunks.
+
+### Step 3 — Retrieve Relevant Content
+
+When the user asks a question, the application compares the question with the available document chunks and retrieves the most relevant content.
+
+### Step 4 — Generate the Answer
+
+The retrieved context is provided to the AI model along with the user's question.
+
+The AI then generates an answer based on the retrieved study material.
+
+### Image Queries
+
+Users can also upload an image along with their question. The multimodal AI model processes the image and generates a response.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Next.js**
+- **React**
+- **TypeScript**
+- **Vercel AI SDK**
+- **Groq API**
+- **pdf2json**
+- **Tailwind CSS**
+- **Vercel**
+
+---
+
+## 📁 Project Structure
+
+```text
+ai-studymate/
+│
+├── app/
+│   ├── api/
+│   ├── page.tsx
+│   └── ...
+│
+├── components/
+│   └── ...
+│
+├── lib/
+│   └── rag.ts
+│
+├── public/
+│
+├── package.json
+├── README.md
+├── .gitignore
+└── ...
