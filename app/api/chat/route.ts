@@ -92,15 +92,16 @@ Rules:
       reply: result.text,
     });
 
-  } catch (error) {
-  console.error("Chat error:", error);
+  }   catch (error) {
+    console.error("Chat error:", error);
 
-  return Response.json(
-    {
-      error: error instanceof Error ? error.message : String(error),
-    },
-    {
-      status: 500,
-    }
-  );
+    return Response.json(
+      {
+        error: error instanceof Error ? error.message : String(error),
+      },
+      {
+        status: 500,
+      }
+    );
+  }
 }
